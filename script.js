@@ -217,6 +217,7 @@
                 $respond.text(val.result.speech.htmlEscape());
                 prependQA(q, val.result.speech);
                 updateLS(q, val.result.speech);
+                $input.val("");
             } else {
                 $respond.text(messageSorry);
             }
