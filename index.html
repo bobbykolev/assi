@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+	<title>Assi</title>
+	<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css">
+	<script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<style>
+		body {
+			margin-top: 20px;
+			color: rgba(0,0,0,.54);
+			font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+		}
+		section, div {
+			margin: auto;
+			text-align: center;
+		}
+		form > div {
+			display: inline-block;
+		}
+		#respond {
+			margin: 20px auto;
+			font-size: 16px;
+		}
+		.mdl-button:not(.mdl-button--fab) {
+		    height: 28px;
+		    font-size: 12px;
+		    line-height: 28px;
+		    border-radius: 0;
+		}
+		.btn-icon {
+			margin-top: 20px;
+			background: none;
+			border: none;
+			font-size: 18px;
+		}
+		.btn-icon .fa-volume-up,
+		.btn-icon .fa-microphone,
+		.btn-icon .fa-trash {
+			color: rgb(255,64,129);
+		}
+		.btn-icon .fa-volume-off,
+		.btn-icon .fa-microphone-slash {
+			color: rgba(158,158,158,.4);
+		}
+		#rec-btn:disabled i {
+			cursor: not-allowed;
+			color: rgba(158,158,158,.2);
+		}
+		.table-container {
+			width: 90%;
+		}
+		table {
+			width: 100%;
+		}
+		.mdl-data-table {
+		    white-space: normal;
+		}
+	</style>
+</head>
+
+<body>
+	
+<section>
+	<div>
+		<!-- <div>
+			<button id="rec-btn" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+			<i class="fa fa-microphone"></i>
+			</button>
+		</div> -->
+		<form>
+			<div>
+				<button id="rec-btn" title="Voice recognition on/off" class="btn-icon">
+					<i class="fa fa-microphone"></i>
+				</button>
+			</div>
+			<div class="mdl-textfield mdl-js-textfield">
+				<input class="mdl-textfield__input" type="text" id="input" placeholder="Assi is an ai, ask her something...">
+				<label for="input" class="mdl-textfield__label"></label>
+			</div>
+			<div>
+				<input id="sbt-btn" type="submit" value="Go" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+			</div>
+		</form>
+	</div>
+	<div>
+		<!-- <div>Assi's response:</div> -->
+		<div id="volume">
+			<button title="Voice response on/off" class="btn-icon">
+			<i class="fa fa-volume-up"></i>
+			</button>
+		</div>
+		<div id="respond"></div>
+	</div>
+	<div class="table-container">
+		<table id="conversation-table" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+		  <thead>
+		    <tr>
+		      <th class="mdl-data-table__cell--non-numeric"><button class="btn-icon" id="delete-conversation"><i class="fa fa-trash"></i></button></th><th>Conversation History</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    
+		  </tbody>
+		</table>
+
+	</div>
+</section>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
